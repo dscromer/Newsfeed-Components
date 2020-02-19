@@ -50,6 +50,7 @@ function createMenu(array) {
   const menuButton = document.querySelector('.menu-button')
   menuButton.addEventListener('click', (e) => {
     menu.classList.toggle('menu--open');
+    gsap.from('li', {duration: 1, opacity: 0, stagger: .25, y: 150})
   });
 
   return menu;
